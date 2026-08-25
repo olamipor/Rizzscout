@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --rizz-green: #22C55E;
+  --rizz-green-2: #16A34A;
+  --dark-bg: #090B0A;
+  --dark-bg-2: #0F1311;
+  --dark-card: #121713;
+  --dark-border: #202720;
+  --dark-text: #F4F7F4;
+  --dark-subtext: #9CA79E;
+  --light-bg: #F7F9F7;
+  --light-card: #FFFFFF;
+  --light-border: #E5EAE5;
+  --light-text: #111511;
+  --light-subtext: #68736A;
+}
+
+html, body, #root { height:100%; }
+
+/* Smooth theme transitions */
+.theme-transition *{
+  transition: background-color 180ms ease, color 180ms ease, border-color 160ms ease, box-shadow 180ms ease;
+}
+
+/* small utility */
+.btn-primary{
+  background: var(--rizz-green);
+  color: white;
+}
+
+/* dark mode overrides applied via .dark class on html */
+html.dark{
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+html:not(.dark){
+  background: var(--light-bg);
+  color: var(--light-text);
+}
